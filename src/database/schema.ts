@@ -4,6 +4,7 @@ export type Instance = {
   port: number;
   username: string;
   password: string;
+  lastBackupAt: number;
 };
 
 export type Backup = {
