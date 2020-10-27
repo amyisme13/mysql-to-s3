@@ -1,0 +1,43 @@
+{
+  "name": "mysql-to-s3",
+  "version": "1.0.0",
+  "description": "A cli app to run mysqldump and store it into s3",
+  "main": "dist/mysql-to-s3.js",
+  "bin": {
+    "mysql-to-s3": "dist/mysql-to-s3.js"
+  },
+  "repository": "https://github.com/amyisme13/mysql-to-s3",
+  "author": "Azmi Makarima <amy.azmim@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint --ignore-path .gitignore --ext .ts src/",
+    "prepare": "tsc"
+  },
+  "devDependencies": {
+    "@types/cron": "^1.7.2",
+    "@types/fs-extra": "^9.0.1",
+    "@types/inquirer": "^7.3.1",
+    "@types/lowdb": "^1.0.9",
+    "@types/node": "^14.6.1",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.1",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.742.0",
+    "cli-table3": "^0.6.0",
+    "commander": "^6.1.0",
+    "cron": "^1.8.2",
+    "date-fns": "^2.16.0",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.3",
+    "lowdb": "^1.0.0",
+    "reflect-metadata": "^0.1.13",
+    "telegraf": "^3.38.0"
+  }
+}
