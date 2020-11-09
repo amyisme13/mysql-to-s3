@@ -52,3 +52,11 @@ Create backup of the instances you added before
 ```bash
 mysql-to-s3 run --bucket <bucket name>
 ```
+
+## Misc
+
+To change tmp dir, you can set it in MYSQL_TO_S3_TMP environment variable.
+
+```bash
+MYSQL_TO_S3_TMP=/path/to/other/dir
+```

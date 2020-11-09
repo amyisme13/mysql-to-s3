@@ -10,9 +10,11 @@ import { createGzip } from 'zlib';
 
 import { Instance } from './database/schema';
 
+const getTmpDir = () => process.env.MYSQL_TO_S3_TMP || os.tmpdir();
+
 export const mysqldump = (instance: Instance): Promise<string> => {
   const filename = `${randomString({ length: 10 })}.sql`;
-  const filepath = path.join(os.tmpdir(), filename);
+  const filepath = path.join(getTmpDir(), filename);
   const stream = fs.createWriteStream(filepath);
 
   return new Promise((resolve, reject) => {
